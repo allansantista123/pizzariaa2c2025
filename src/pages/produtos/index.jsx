@@ -1,12 +1,15 @@
+import {useState, useEffect} from 'react'
+import axio from 'axios'
+
 const Produtos = () => {
+    const [pizzas, setPizzas] = useStates([])
+    // Consumir rotas com lista de produtos
+   axios.get("")
+   .then(response=>{
+        console.log(response.data)
+   })
+   .catch(error=>{console.log(error)})
 
-
-    // Objeto da lista de pizzas
-    const pizzas = [
-        'Pizza Muçarela',
-        'Pizza Calabresa',
-        'Pizza Portuguesa'
-    ]
     // Literção da lista e pizzas - pizza a pizza (um a um)
     const listaPizzas = pizzas.map(pizza=><li>{pizza}</li>)
     
